@@ -41,9 +41,11 @@ body {
     color: #818181;
     margin-bottom: 10px;
 }
-.table_answer{
+
+.table_answer {
     width: 80%;
 }
+
 .button_calculate {
     height: 6%;
     background-color: #cfcfcf;
@@ -62,9 +64,12 @@ body {
 th {
     border: 1px solid black;
 }
-td,th {
+
+td,
+th {
     width: 50%;
 }
+
 tbody tr {
     cursor: pointer;
     text-align: center;
