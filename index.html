@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculate_position">
+        <div class="block_calculate">
+            <div class="name_calulate">
+                <h2>Калькулятор квадратных уравнений</h2>
+            </div>
+            <div class="description">Введите квадратное уравнение вида: ( 2x^2-9x+7=0 )</div>
+            <div class="description">или через пробел введите коэффициенты вида: ( 1 -11 18 )</div>
+            <input type="text" id="formulaString" placeholder="Введите значения" class="input_fourmul">
+            <div class="error" id="error"></div>
+            <button id="buttonAnswer" class="button_calculate">Расчитать квадратное уравнение</button>
+            <div class="name_table"><h3>таблица расчётов</h3></div>
+            <table id="table_answers" class="table_answer">
+                <thead>
+                    <tr>
+                        <th>Введенные данные</th>
+                        <th>Ответ</th>
+                    </tr>
+                </thead>
+                <tbody id="body_answer" class="answer">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
