@@ -3,7 +3,8 @@ let button = document.getElementById("buttonAnswer").addEventListener('click', g
 
 // Получение ответа и вывод ошибок
 function getAnswer() {
-    let str = document.getElementById("formulaString").value;
+    let formul = document.getElementById("formulaString");
+    let str = formul.value;
     let error = document.getElementById("error");
     let strFullPatern = str.replace(/\s+/g, "");
     let strCoefPattern = str.trim().replace(/\s+/g, " ");
@@ -21,14 +22,16 @@ function getAnswer() {
         answer = calculateDiscriminant(group[1], group[3], group[6]);
         addElement(strFullPatern, answer);
         error.textContent = "";
+        formul.value = "";
     } else if (patternCoef.test(strCoefPattern)) {
         let group = patternCoef.exec(str);
         console.log(group);
         answer = calculateDiscriminant(group[1], group[3], group[5]);
         addElement(strCoefPattern, answer);
+        formul.value = "";
         error.textContent = "";
     } else {
-        error.textContent = "Ошибка: неправельный ввод данных";
+        error.textContent = "Ошибка: некорректный ввод данных";
     }
 }
 
